@@ -26,11 +26,13 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow-y: auto;
   min-height: 100vh;
 }
 
 .container-fluid {
   flex-grow: 1;
+  overflow: hidden;
 }
 
 .bg-main-content-login {
@@ -65,6 +67,8 @@ body {
 
 .promo-image {
   max-width: 424px; /* Limit the size of promo.png */
+  max-height: 150px;
+  object-fit: contain;
   margin-bottom: 12px;
 }
 
@@ -90,7 +94,7 @@ body {
 .content-wrapper {
   background-color: #ffffff;
   max-width: 450px;
-  border-radius: 8px;
+  border-radius: 40px;
   padding: 24px;
   /* opacity: 0.5; */
 }
@@ -112,7 +116,9 @@ body {
   width: 100%;
   max-width: 512px;
   height: auto;
+  max-height: 200px;
   margin: auto;
+  object-fit: contain;
 }
 
 /* Extend Background */
@@ -184,8 +190,11 @@ label {
 
 /* Icon and button styles */
 .icon-top-left {
-  height: auto;
-  width: 100%;
+  max-height: 80px;
+  max-width: 300px;
+  object-fit: contain;
+  object-position: left;
+  margin: 10px;
 }
 
 .language-dropdown .btn-light {
@@ -199,7 +208,7 @@ label {
   min-height: 40px !important;
   height: 40px !important;
   padding: 0px;
-  border-radius: 8px;
+  border-radius: 25px;
 }
 
 /* Bottom navigation styles */
@@ -208,8 +217,8 @@ label {
   justify-content: center;
   align-items: center;
   align-self: center;
-  background-color: #F5F3DD80;
-  max-width: 900px;
+  /* background-color: #F5F3DD80; */
+  max-width: 450px;
   width: 100%;
   /* height: 100px; */
   z-index: 2;
@@ -230,9 +239,10 @@ label {
   display: flex;
   justify-content: center;
   width: 100%;
-  /* height: 100px; */
+  height: 100px;
   background-color: #FAF9EE;
   /* padding: 14px 0px 14px 0px; */
+  border-radius: 8px;
 }
 
 .bottom-nav .nav-item {
@@ -319,7 +329,7 @@ label {
 .btn-custom {
   width: 100%;
   min-height: 40px !important;
-  border-radius: 8px;
+  border-radius: 25px;
   height: 40px;
   padding: 10px 10px;
   font-size: 12px;
@@ -343,7 +353,7 @@ label {
   color: #f4a022;
   border: 1px solid #f4a022;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 25px;
 }
 
 .btn-custom-outline:hover {
@@ -378,7 +388,7 @@ label {
   position: relative;
   text-decoration: none;
   background-color: #f4a022;
-  border-radius: 8px;
+  border-radius: 25px;
 }
 
 .accordion .accordion-button.collapsed {
@@ -386,7 +396,7 @@ label {
   border: 1px solid #f4a022;
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
+  border-radius: 25px;
 }
 
 .accordion .accordion-button.collapsed::after {
@@ -507,6 +517,8 @@ hr {
 
   .promo-image {
     width: 100%;
+    max-height: 150px;
+    object-fit: contain;
     padding: 0px 24px 0px 24px;
   }
 
@@ -528,6 +540,7 @@ hr {
     position: fixed;
     bottom: 0;
     width: 100%;
+    max-width: none;
     justify-content: space-around;
     /* padding: 10px; */
   }
@@ -599,7 +612,6 @@ hr {
   }
 
   .main-content-card-login {
-    background-color: #F5F3DD80;
     padding: 0px 24px 0px 24px;
     border-bottom-right-radius: 0px;
     margin-bottom: 0px;
@@ -622,6 +634,7 @@ hr {
 
   .main-content-left-login {
     padding-inline: 0px;
+    background-color: #F5F3DD80;
   }
 
   .button-extra {
